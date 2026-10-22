@@ -1,0 +1,75 @@
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:blueviolet;
+    margin:0;
+}
+header p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    font-weight: bold;
+    margin:20px;
+}
+header{
+    margin-bottom: 0px;
+    padding:10px;
+}
+.contenedor-animacion{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:0px;
+    padding:10px;
+}
+.texto-animado{
+    font-size: 3rem;
+    color: blueviolet;
+    animation: achicarTexto 2s infinite alternate;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+
+@-webkit-keyframes achicarTexto{
+    0%{
+        -webkit-transform-origin: scale(1);
+    }
+    50%{
+        -webkit-transform: scale(0.5);
+    }
+}
+@-moz-keyframes achicarTexto{
+    0%{
+        -moz-transform: scale(1);
+    }
+    50%{
+        -moz-transform: scale(0.5);
+    }
+}
+@-ms-keyframes achicarTexto{
+    0%{
+        -ms-transform: scale(1);
+    }
+    50%{
+        -ms-transform: scale(0.5);
+    }
+}
+@-moz-document url-prefix() {
+    .texto-animado{
+        background-color: red;
+    }
+}
+@supports (-webkit-appearance:none) {
+    .texto-animado{
+        background-color: green;
+    }
+}
+@supports (-ms-appearance:none) {
+    .texto-animado{
+        background-color: green;
+    }
+}
+
